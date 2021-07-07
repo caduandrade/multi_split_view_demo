@@ -17,7 +17,7 @@ void main() {
   Size? maxSize;
   // maxSize = Size(400, 300);
   runApp(DemoFluApp(
-      title: 'Multi split view (1.4.0)',
+      title: 'Multi split view (1.5.0)',
       widgetBackground: Colors.white,
       sections: [
         Section(examples: [
