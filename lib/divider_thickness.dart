@@ -10,9 +10,13 @@ class DividerThicknessExample extends StatelessWidget with ContentBuilder {
     Widget child2 = buildContent(2);
     Widget child3 = buildContent(3);
 
-    MultiSplitView multiSplitView = MultiSplitView(
-        children: [child1, child2, child3], dividerThickness: 30);
+    MultiSplitView multiSplitView =
+        MultiSplitView(children: [child1, child2, child3]);
 
-    return multiSplitView;
+    MultiSplitViewTheme theme = MultiSplitViewTheme(
+        child: multiSplitView,
+        data: MultiSplitViewThemeData(dividerThickness: 30));
+
+    return theme;
   }
 }

@@ -11,19 +11,18 @@ class DividerPainterExample extends StatelessWidget with ContentBuilder {
     Widget child3 = buildContent(3);
     Widget child4 = buildContent(4);
 
-    MultiSplitView multiSplitView = MultiSplitView(
-        axis: Axis.vertical,
-        children: [
-          MultiSplitView(
-              children: [child1, child2, child3],
-              dividerThickness: 10,
-              dividerPainter: _paint),
-          child4
-        ],
-        dividerThickness: 10,
-        dividerPainter: _paint);
+    MultiSplitView multiSplitView =
+        MultiSplitView(axis: Axis.vertical, children: [
+      MultiSplitView(children: [child1, child2, child3]),
+      child4
+    ]);
 
-    return multiSplitView;
+    MultiSplitViewTheme theme = MultiSplitViewTheme(
+        child: multiSplitView,
+        data: MultiSplitViewThemeData(
+            dividerThickness: 10, dividerPainter: _paint));
+
+    return theme;
   }
 
   _paint(

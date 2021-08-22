@@ -9,9 +9,12 @@ class DividerColorExample extends StatelessWidget with ContentBuilder {
     Widget child1 = buildContent(1);
     Widget child2 = buildContent(2);
 
-    MultiSplitView multiSplitView =
-        MultiSplitView(children: [child1, child2], dividerColor: Colors.black);
+    MultiSplitView multiSplitView = MultiSplitView(children: [child1, child2]);
 
-    return multiSplitView;
+    MultiSplitViewTheme theme = MultiSplitViewTheme(
+        child: multiSplitView,
+        data: MultiSplitViewThemeData(dividerColor: Colors.black));
+
+    return theme;
   }
 }

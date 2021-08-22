@@ -17,79 +17,86 @@ void main() {
   Size? maxSize;
   // maxSize = Size(400, 300);
   runApp(DemoFluApp(
-      title: 'Multi split view (1.5.0)',
+      title: 'Multi split view (1.7.0)',
       widgetBackground: Colors.white,
-      sections: [
-        Section(examples: [
-          Example(
+      appMenuBuilder: (exampleMenuNotifier) {
+        return [
+          MenuItem(
               name: 'Horizontal',
-              builder: (buttonClickNotifier) => HorizontalExample(),
+              example: HorizontalExample(),
               codeFile: 'lib/horizontal.dart',
-              maxSize: maxSize),
-          Example(
+              maxSize: maxSize,
+              indentation: 2),
+          MenuItem(
               name: 'Vertical',
-              builder: (buttonClickNotifier) => VerticalExample(),
+              example: VerticalExample(),
               codeFile: 'lib/vertical.dart',
-              maxSize: maxSize),
-          Example(
+              maxSize: maxSize,
+              indentation: 2),
+          MenuItem(
               name: 'Horizontal and vertical',
-              builder: (buttonClickNotifier) => HorizontalVerticalExample(),
+              example: HorizontalVerticalExample(),
               codeFile: 'lib/horizontal_vertical.dart',
-              maxSize: maxSize)
-        ]),
-        Section(name: 'Size', examples: [
-          Example(
+              maxSize: maxSize,
+              indentation: 2),
+          MenuItem(name: 'Size', italic: true),
+          MenuItem(
               name: 'Setting the weight',
-              builder: (buttonClickNotifier) => SettingWeightExample(),
+              example: SettingWeightExample(),
               codeFile: 'lib/setting_weight.dart',
-              maxSize: maxSize),
-          Example(
+              maxSize: maxSize,
+              indentation: 2),
+          MenuItem(
               name: 'Minimal weight',
-              builder: (buttonClickNotifier) => MinimalWeightExample(),
+              example: MinimalWeightExample(),
               codeFile: 'lib/minimal_weight.dart',
-              maxSize: maxSize),
-          Example(
+              maxSize: maxSize,
+              indentation: 2),
+          MenuItem(
               name: 'Minimal size',
-              builder: (buttonClickNotifier) => MinimalSizeExample(),
+              example: MinimalSizeExample(),
               codeFile: 'lib/minimal_size.dart',
-              maxSize: maxSize),
-          Example(
+              maxSize: maxSize,
+              indentation: 2),
+          MenuItem(
               name: 'Resizing disabled',
-              builder: (buttonClickNotifier) => ResizableExample(),
+              example: ResizableExample(),
               codeFile: 'lib/resizable.dart',
-              maxSize: maxSize),
-          Example(
+              maxSize: maxSize,
+              indentation: 2),
+          MenuItem(
               name: 'Listener',
-              builder: (buttonClickNotifier) => SizeListenerExample(),
+              example: SizeListenerExample(),
               codeFile: 'lib/listener.dart',
               consoleEnabled: true,
-              maxSize: maxSize)
-        ]),
-        Section(name: 'Divider', examples: [
-          Example(
+              maxSize: maxSize,
+              indentation: 2),
+          MenuItem(name: 'Divider', italic: true),
+          MenuItem(
               name: 'Color',
-              builder: (buttonClickNotifier) => DividerColorExample(),
+              example: DividerColorExample(),
               codeFile: 'lib/divider_color.dart',
-              maxSize: maxSize),
-          Example(
+              maxSize: maxSize,
+              indentation: 2),
+          MenuItem(
               name: 'Thickness',
-              builder: (buttonClickNotifier) => DividerThicknessExample(),
+              example: DividerThicknessExample(),
               codeFile: 'lib/divider_thickness.dart',
-              maxSize: maxSize),
-          Example(
+              maxSize: maxSize,
+              indentation: 2),
+          MenuItem(
               name: 'Painter',
-              builder: (buttonClickNotifier) => DividerPainterExample(),
+              example: DividerPainterExample(),
               codeFile: 'lib/divider_painter.dart',
-              maxSize: maxSize)
-        ]),
-        Section(name: 'Dynamic', examples: [
-          Example(
+              maxSize: maxSize,
+              indentation: 2),
+          MenuItem(name: 'Dynamic', italic: true),
+          MenuItem(
               name: 'Add/Remove',
-              builder: (buttonClickNotifier) =>
-                  AddRemoveExample(buttonClickNotifier),
+              example: AddRemoveExample(exampleMenuNotifier),
               codeFile: 'lib/add_remove.dart',
               maxSize: maxSize,
-              buttons: ['Add', 'Remove'])
-        ])
-      ]));
+              indentation: 2)
+        ];
+      }));
 }
