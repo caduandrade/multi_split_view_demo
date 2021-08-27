@@ -23,9 +23,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  multi_split_view: ^1.7.0
+  multi_split_view: ^1.7.1
     #path: ../multi_split_view/
-  demoflu: ^0.7.1
+  demoflu: ^0.7.2
     #path: ../demoflu/
 
 
