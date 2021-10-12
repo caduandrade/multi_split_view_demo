@@ -10,8 +10,8 @@ const RESOURCES = {
 "assets/lib/horizontal_vertical.dart": "252b67af9d4706f706b15ce23ad1b751",
 "assets/lib/listener.dart": "c6f0f5b45ef12dfa894a161b278cee29",
 "assets/lib/resizable.dart": "2f9e7e28c1f132a40ae8716cd75eb085",
-"assets/lib/divider_color.dart": "0dba07c34e31c963e57da58369cda41d",
 "assets/lib/divider_highlighted_color.dart": "ea853b01fa17b8f0bc7018c8f8eb8c01",
+"assets/lib/divider_color.dart": "0dba07c34e31c963e57da58369cda41d",
 "assets/lib/dashed_divider.dart": "51b5430b92a08825f7755693cd114b96",
 "assets/lib/grooved_divider_1.dart": "0626b05cc2fdc99c3b8031f9be4f3271",
 "assets/lib/grooved_divider_2.dart": "3e6fc781e23edda1643093639bb0d145",
@@ -29,8 +29,8 @@ const RESOURCES = {
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
-"index.html": "a9f0a732020954fc1d1414711edee493",
-"/": "a9f0a732020954fc1d1414711edee493",
+"index.html": "558b543451604bdbede162b0cf6bbc5c",
+"/": "558b543451604bdbede162b0cf6bbc5c",
 "manifest.json": "b3b4999ffcf5c4e0855e1b26263d3524"
 };
 

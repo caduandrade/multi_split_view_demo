@@ -6,6 +6,7 @@ import 'package:multi_split_view_demo/divider_highlighted_color.dart';
 import 'package:multi_split_view_demo/divider_thickness.dart';
 import 'package:multi_split_view_demo/add_remove.dart';
 import 'package:multi_split_view_demo/get_started.dart';
+import 'package:multi_split_view_demo/grooved_divider_1.dart';
 import 'package:multi_split_view_demo/grooved_divider_2.dart';
 import 'package:multi_split_view_demo/horizontal.dart';
 import 'package:multi_split_view_demo/horizontal_vertical.dart';
@@ -15,8 +16,6 @@ import 'package:multi_split_view_demo/minimal_weight.dart';
 import 'package:multi_split_view_demo/resizable.dart';
 import 'package:multi_split_view_demo/setting_weight.dart';
 import 'package:multi_split_view_demo/vertical.dart';
-
-import 'grooved_divider_1.dart';
 
 void main() {
   Size? maxSize;
