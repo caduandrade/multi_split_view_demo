@@ -15,7 +15,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
 # Read more about iOS versioning at
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
-version: 1.7.2
+version: 1.8.0
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
@@ -23,11 +23,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  multi_split_view: ^1.7.2
+  multi_split_view: ^1.8.0
     #path: ../multi_split_view/
-  demoflu: ^0.7.2
+  demoflu: ^0.8.2
     #path: ../demoflu/
-
 
 dev_dependencies:
   flutter_test:
@@ -52,14 +51,16 @@ flutter:
     - lib/listener.dart
     - lib/resizable.dart
     - lib/divider_color.dart
+    - lib/divider_highlighted_color.dart
+    - lib/dashed_divider.dart
+    - lib/grooved_divider_1.dart
+    - lib/grooved_divider_2.dart
     - lib/divider_thickness.dart
-    - lib/divider_painter.dart
+    - lib/get_started.dart
     - lib/setting_weight.dart
     - lib/minimal_weight.dart
     - lib/minimal_size.dart
     - lib/add_remove.dart
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

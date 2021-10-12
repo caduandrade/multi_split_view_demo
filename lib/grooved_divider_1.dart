@@ -3,7 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:multi_split_view/multi_split_view.dart';
 import 'package:multi_split_view_demo/example_widget.dart';
 
-class DividerColorExample extends StatelessWidget with ContentBuilder {
+class GroovedDivider1Example extends StatelessWidget with ContentBuilder {
   @override
   Widget build(BuildContext context) {
     Widget child1 = buildContent(1);
@@ -14,7 +14,9 @@ class DividerColorExample extends StatelessWidget with ContentBuilder {
     MultiSplitViewTheme theme = MultiSplitViewTheme(
         child: multiSplitView,
         data: MultiSplitViewThemeData(
-            dividerPainter: DividerPainters.background(color: Colors.black)));
+            dividerPainter: DividerPainters.grooved1(
+                color: Colors.indigo[100]!,
+                highlightedColor: Colors.indigo[900]!)));
 
     return theme;
   }

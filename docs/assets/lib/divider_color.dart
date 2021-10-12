@@ -13,7 +13,8 @@ class DividerColorExample extends StatelessWidget with ContentBuilder {
 
     MultiSplitViewTheme theme = MultiSplitViewTheme(
         child: multiSplitView,
-        data: MultiSplitViewThemeData(dividerColor: Colors.black));
+        data: MultiSplitViewThemeData(
+            dividerPainter: DividerPainters.background(color: Colors.black)));
 
     return theme;
   }
