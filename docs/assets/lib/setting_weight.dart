@@ -13,7 +13,7 @@ class SettingWeightExample extends StatelessWidget with ContentBuilder {
     // setting 10% of weight for the first child
     MultiSplitView multiSplitView = MultiSplitView(
         children: [child1, child2, child3],
-        controller: MultiSplitViewController(weights: [0.1]));
+        controller: MultiSplitViewController(initialWeights: [0.1]));
 
     return multiSplitView;
   }

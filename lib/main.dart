@@ -1,5 +1,8 @@
 import 'package:demoflu/demoflu.dart';
 import 'package:flutter/material.dart';
+import 'package:multi_split_view_demo/custom_dashed_divider.dart';
+import 'package:multi_split_view_demo/custom_grooved_divider_1.dart';
+import 'package:multi_split_view_demo/custom_grooved_divider_2.dart';
 import 'package:multi_split_view_demo/dashed_divider.dart';
 import 'package:multi_split_view_demo/divider_color.dart';
 import 'package:multi_split_view_demo/divider_highlighted_color.dart';
@@ -21,7 +24,7 @@ void main() {
   Size? maxSize;
   //maxSize = Size(400, 300);
   runApp(DemoFluApp(
-      title: 'Multi split view (1.8.0)',
+      title: 'Multi split view (1.9.0)',
       widgetBackground: Colors.white,
       appMenuBuilder: (exampleMenuNotifier) {
         return [
@@ -108,17 +111,35 @@ void main() {
               maxSize: maxSize,
               indentation: 3),
           MenuItem(
+              name: 'Customizations',
+              example: CustomDashedDividerExample(),
+              codeFile: 'lib/custom_dashed_divider.dart',
+              maxSize: maxSize,
+              indentation: 4),
+          MenuItem(
               name: 'Grooved divider 1',
               example: GroovedDivider1Example(),
               codeFile: 'lib/grooved_divider_1.dart',
               maxSize: maxSize,
               indentation: 3),
           MenuItem(
+              name: 'Customizations',
+              example: CustomGroovedDivider1Example(),
+              codeFile: 'lib/custom_grooved_divider_1.dart',
+              maxSize: maxSize,
+              indentation: 4),
+          MenuItem(
               name: 'Grooved divider 2',
               example: GroovedDivider2Example(),
               codeFile: 'lib/grooved_divider_2.dart',
               maxSize: maxSize,
               indentation: 3),
+          MenuItem(
+              name: 'Customizations',
+              example: CustomGroovedDivider2Example(),
+              codeFile: 'lib/custom_grooved_divider_2.dart',
+              maxSize: maxSize,
+              indentation: 4),
           MenuItem(name: 'Dynamic', italic: true),
           MenuItem(
               name: 'Add/Remove',
