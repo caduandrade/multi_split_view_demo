@@ -17,7 +17,8 @@ import 'package:multi_split_view_demo/listener.dart';
 import 'package:multi_split_view_demo/minimal_size.dart';
 import 'package:multi_split_view_demo/minimal_weight.dart';
 import 'package:multi_split_view_demo/resizable.dart';
-import 'package:multi_split_view_demo/setting_weight.dart';
+import 'package:multi_split_view_demo/setting_weight_stateful.dart';
+import 'package:multi_split_view_demo/setting_weight_stateless.dart';
 import 'package:multi_split_view_demo/vertical.dart';
 
 void main() {
@@ -26,7 +27,7 @@ void main() {
   runApp(DemoFluApp(
       title: 'Multi split view (1.9.0)',
       widgetBackground: Colors.white,
-      appMenuBuilder: (exampleMenuNotifier) {
+      appMenuBuilder: () {
         return [
           MenuItem(
               name: 'Get started',
@@ -53,12 +54,19 @@ void main() {
               maxSize: maxSize,
               indentation: 2),
           MenuItem(name: 'Size', italic: true),
+          MenuItem(name: 'Setting the weight', indentation: 2, italic: true),
           MenuItem(
-              name: 'Setting the weight',
-              example: SettingWeightExample(),
-              codeFile: 'lib/setting_weight.dart',
+              name: 'Stateless',
+              example: SettingWeightStatelessExample(),
+              codeFile: 'lib/setting_weight_stateless.dart',
               maxSize: maxSize,
-              indentation: 2),
+              indentation: 3),
+          MenuItem(
+              name: 'Stateful',
+              example: SettingWeightStatefulExample(),
+              codeFile: 'lib/setting_weight_stateful.dart',
+              maxSize: maxSize,
+              indentation: 3),
           MenuItem(
               name: 'Minimal weight',
               example: MinimalWeightExample(),
@@ -143,7 +151,7 @@ void main() {
           MenuItem(name: 'Dynamic', italic: true),
           MenuItem(
               name: 'Add/Remove',
-              example: AddRemoveExample(exampleMenuNotifier),
+              example: AddRemoveExample(),
               codeFile: 'lib/add_remove.dart',
               maxSize: maxSize,
               indentation: 2)
