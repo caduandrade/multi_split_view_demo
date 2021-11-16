@@ -25,7 +25,7 @@ void main() {
   Size? maxSize;
   //maxSize = Size(400, 300);
   runApp(DemoFluApp(
-      title: 'Multi split view (1.9.0)',
+      title: 'Multi split view (1.10.0)',
       widgetBackground: Colors.white,
       appMenuBuilder: () {
         return [

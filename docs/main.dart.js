@@ -4298,7 +4298,7 @@ p=P.an(7,m,!1,t.JI)
 o=t.S
 n=t.j1
 new N.HO(m,s,!0,new P.b6(new P.ac(r,t.D),t.Q),!1,m,!1,!1,m,m,m,!1,0,!1,m,m,new N.Nx(P.b1(t.Cn)),m,m,m,m,m,q,m,N.azv(),new Y.DB(N.azu(),p,t.G7),!1,0,P.o(o,t.h1),P.bK(o),H.b([],n),H.b([],n),m,!1,C.cj,!0,!1,m,C.C,C.C,m,0,m,!1,P.fQ(m,t.W2),new O.YG(P.o(o,t.rr),P.o(t.Ld,t.iD)),new D.Ux(P.o(o,t.cK)),new G.YJ(),P.o(o,t.Fn),m,!1,C.a4u).SE()}s=$.C
-s.O3(new N.tf("Multi split view (1.9.0)",new F.abh(m),C.k,m))
+s.O3(new N.tf("Multi split view (1.10.0)",new F.abh(m),C.k,m))
 s.Cy()},
 abh:function abh(a){this.a=a},
 X4:function X4(a){this.a=a},
