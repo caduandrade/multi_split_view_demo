@@ -1,10 +1,9 @@
 import 'package:demoflu/demoflu.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:multi_split_view/multi_split_view.dart';
 import 'package:multi_split_view_demo/example_widget.dart';
 
-class DividerThicknessExample extends Example {
+class DividerCustomWidgetExample extends Example {
   @override
   Widget buildMainWidget(BuildContext context) => MainWidget();
 }
@@ -16,12 +15,22 @@ class MainWidget extends StatelessWidget with ContentBuilder {
     Widget child2 = buildContent(2);
     Widget child3 = buildContent(3);
 
-    MultiSplitView multiSplitView =
-        MultiSplitView(children: [child1, child2, child3]);
+    MultiSplitView multiSplitView = MultiSplitView(
+        children: [child1, child2, child3],
+        dividerBuilder:
+            (axis, index, resizable, dragging, highlighted, themeData) {
+          return Container(
+            color: dragging ? Colors.grey[300] : Colors.grey[100],
+            child: Icon(
+              Icons.drag_indicator,
+              color: highlighted ? Colors.grey[600] : Colors.grey[400],
+            ),
+          );
+        });
 
     MultiSplitViewTheme theme = MultiSplitViewTheme(
         child: multiSplitView,
-        data: MultiSplitViewThemeData(dividerThickness: 30));
+        data: MultiSplitViewThemeData(dividerThickness: 24));
 
     return theme;
   }

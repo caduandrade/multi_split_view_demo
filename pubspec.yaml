@@ -23,14 +23,16 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  multi_split_view: ^1.10.0+1
-    #path: ../multi_split_view/
-  demoflu: ^0.9.0
-    #path: ../demoflu/
+  multi_split_view: #^1.11.0
+    path: ../multi_split_view/
+  demoflu: #^0.9.0
+    path: ../demoflu/
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+  flutter_lints: ^1.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -59,6 +61,7 @@ flutter:
     - lib/grooved_divider_2.dart
     - lib/custom_grooved_divider_2.dart
     - lib/divider_thickness.dart
+    - lib/divider_custom_widget.dart
     - lib/get_started.dart
     - lib/setting_weight_stateful.dart
     - lib/setting_weight_stateless.dart
