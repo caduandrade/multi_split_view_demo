@@ -46,9 +46,9 @@ packages:
   demoflu:
     dependency: "direct main"
     description:
-      path: "../demoflu"
-      relative: true
-    source: path
+      name: demoflu
+      url: "https://pub.dartlang.org"
+    source: hosted
     version: "0.11.0"
   fake_async:
     dependency: transitive
@@ -131,9 +131,9 @@ packages:
   multi_split_view:
     dependency: "direct main"
     description:
-      path: "../multi_split_view"
-      relative: true
-    source: path
+      name: multi_split_view
+      url: "https://pub.dartlang.org"
+    source: hosted
     version: "1.11.0"
   path:
     dependency: transitive
@@ -209,7 +209,21 @@ packages:
       name: url_launcher
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "6.0.13"
+    version: "6.0.18"
+  url_launcher_android:
+    dependency: transitive
+    description:
+      name: url_launcher_android
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "6.0.14"
+  url_launcher_ios:
+    dependency: transitive
+    description:
+      name: url_launcher_ios
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "6.0.14"
   url_launcher_linux:
     dependency: transitive
     description:
