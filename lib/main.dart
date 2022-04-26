@@ -15,8 +15,10 @@ import 'package:multi_split_view_demo/grooved_divider_2.dart';
 import 'package:multi_split_view_demo/horizontal.dart';
 import 'package:multi_split_view_demo/horizontal_vertical.dart';
 import 'package:multi_split_view_demo/listener.dart';
-import 'package:multi_split_view_demo/minimal_size.dart';
-import 'package:multi_split_view_demo/minimal_weight.dart';
+import 'package:multi_split_view_demo/global_minimal_size.dart';
+import 'package:multi_split_view_demo/global_minimal_weight.dart';
+import 'package:multi_split_view_demo/minimal_sizes.dart';
+import 'package:multi_split_view_demo/minimal_weights.dart';
 import 'package:multi_split_view_demo/resizable.dart';
 import 'package:multi_split_view_demo/setting_weight_stateful.dart';
 import 'package:multi_split_view_demo/setting_weight_stateless.dart';
@@ -26,7 +28,7 @@ void main() {
   Size? maxSize;
   //maxSize = Size(400, 300);
   runApp(DemoFluApp(
-      title: 'Multi split view (1.11.0)',
+      title: 'Multi split view (1.13.0)',
       widgetBackground: Colors.white,
       appMenuBuilder: () {
         return [
@@ -69,15 +71,27 @@ void main() {
               maxSize: maxSize,
               indentation: 3),
           MenuItem(
-              name: 'Minimal weight',
-              builder: () => MinimalWeightExample(),
-              codeFile: 'lib/minimal_weight.dart',
+              name: 'Minimal weights',
+              builder: () => MinimalWeightsExample(),
+              codeFile: 'lib/minimal_weights.dart',
               maxSize: maxSize,
               indentation: 2),
           MenuItem(
-              name: 'Minimal size',
-              builder: () => MinimalSizeExample(),
-              codeFile: 'lib/minimal_size.dart',
+              name: 'Global minimal weight',
+              builder: () => GlobalMinimalWeightExample(),
+              codeFile: 'lib/global_minimal_weight.dart',
+              maxSize: maxSize,
+              indentation: 2),
+          MenuItem(
+              name: 'Minimal sizes',
+              builder: () => MinimalSizesExample(),
+              codeFile: 'lib/minimal_sizes.dart',
+              maxSize: maxSize,
+              indentation: 2),
+          MenuItem(
+              name: 'Global minimal size',
+              builder: () => GlobalMinimalSizeExample(),
+              codeFile: 'lib/global_minimal_size.dart',
               maxSize: maxSize,
               indentation: 2),
           MenuItem(

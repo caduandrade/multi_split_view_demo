@@ -49,7 +49,7 @@ packages:
       name: demoflu
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.11.0"
+    version: "0.12.0"
   fake_async:
     dependency: transitive
     description:
@@ -121,6 +121,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.12.11"
+  material_color_utilities:
+    dependency: transitive
+    description:
+      name: material_color_utilities
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.1.3"
   meta:
     dependency: transitive
     description:
@@ -134,7 +141,7 @@ packages:
       name: multi_split_view
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.11.0"
+    version: "1.13.0"
   path:
     dependency: transitive
     description:
@@ -195,7 +202,7 @@ packages:
       name: test_api
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.4.3"
+    version: "0.4.8"
   typed_data:
     dependency: transitive
     description:
