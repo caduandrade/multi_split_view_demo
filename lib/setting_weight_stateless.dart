@@ -18,7 +18,7 @@ class MainWidget extends StatelessWidget with ContentBuilder {
 
     // setting 10% of weight for the first child
     MultiSplitView multiSplitView = MultiSplitView(
-        children: [child1, child2, child3], initialWeights: [0.1]);
+        children: [child1, child2, child3], initialAreas: [Area(weight: 0.1)]);
 
     return multiSplitView;
   }

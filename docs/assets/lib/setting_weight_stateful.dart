@@ -16,7 +16,9 @@ class MainWidget extends StatefulWidget {
 
 class _State extends State<MainWidget> with ContentBuilder {
   MultiSplitViewController _controller =
-      MultiSplitViewController(weights: [0.1]);
+      MultiSplitViewController(areas: [Area(weight: 0.1)]);
+  MultiSplitViewController _controller2 =
+      MultiSplitViewController(areas: Area.weights([0.1]));
 
   @override
   Widget build(BuildContext context) {
