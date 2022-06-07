@@ -18,9 +18,8 @@ class MainWidget extends StatelessWidget with ContentBuilder {
 
     MultiSplitView multiSplitView = MultiSplitView(
         children: [child1, child2, child3, child4],
-        onSizeChange: (childIndex1, childIndex2) => DemoFlu.printOnConsole(
-            context,
-            'Index of children whose size has changed: $childIndex1 and $childIndex2'));
+        onWeightChange: () =>
+            DemoFlu.printOnConsole(context, 'Weight has changed'));
 
     return multiSplitView;
   }

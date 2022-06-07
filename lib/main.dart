@@ -27,143 +27,144 @@ void main() {
   Size? maxSize;
   //maxSize = Size(400, 300);
   runApp(DemoFluApp(
-      title: 'Multi split view (2.0.0)',
+      title: 'Multi split view (2.1.0)',
       widgetBackground: Colors.white,
       appMenuBuilder: () {
         return [
-          MenuItem(
+          DemoMenuItem(
               name: 'Get started',
               builder: () => GetStartedExample(),
               codeFile: 'lib/get_started.dart',
               maxSize: maxSize,
               indentation: 2),
-          MenuItem(
+          DemoMenuItem(
               name: 'Horizontal',
               builder: () => HorizontalExample(),
               codeFile: 'lib/horizontal.dart',
               maxSize: maxSize,
               indentation: 2),
-          MenuItem(
+          DemoMenuItem(
               name: 'Vertical',
               builder: () => VerticalExample(),
               codeFile: 'lib/vertical.dart',
               maxSize: maxSize,
               indentation: 2),
-          MenuItem(
+          DemoMenuItem(
               name: 'Horizontal and vertical',
               builder: () => HorizontalVerticalExample(),
               codeFile: 'lib/horizontal_vertical.dart',
               maxSize: maxSize,
               indentation: 2),
-          MenuItem(name: 'Size', italic: true),
-          MenuItem(name: 'Setting the weight', indentation: 2, italic: true),
-          MenuItem(
+          DemoMenuItem(name: 'Size', italic: true),
+          DemoMenuItem(
+              name: 'Setting the weight', indentation: 2, italic: true),
+          DemoMenuItem(
               name: 'Stateless',
               builder: () => SettingWeightStatelessExample(),
               codeFile: 'lib/setting_weight_stateless.dart',
               maxSize: maxSize,
               indentation: 3),
-          MenuItem(
+          DemoMenuItem(
               name: 'Stateful',
               builder: () => SettingWeightStatefulExample(),
               codeFile: 'lib/setting_weight_stateful.dart',
               maxSize: maxSize,
               indentation: 3),
-          MenuItem(
+          DemoMenuItem(
               name: 'Minimal weights',
               builder: () => MinimalWeightsExample(),
               codeFile: 'lib/minimal_weights.dart',
               maxSize: maxSize,
               indentation: 2),
-          MenuItem(
+          DemoMenuItem(
               name: 'Minimal sizes',
               builder: () => MinimalSizesExample(),
               codeFile: 'lib/minimal_sizes.dart',
               maxSize: maxSize,
               indentation: 2),
-          MenuItem(
+          DemoMenuItem(
               name: 'Resizing disabled',
               builder: () => ResizableExample(),
               codeFile: 'lib/resizable.dart',
               maxSize: maxSize,
               indentation: 2),
-          MenuItem(
+          DemoMenuItem(
               name: 'Listener',
               builder: () => SizeListenerExample(),
               codeFile: 'lib/listener.dart',
               consoleEnabled: true,
               maxSize: maxSize,
               indentation: 2),
-          MenuItem(name: 'Divider', italic: true),
-          MenuItem(
+          DemoMenuItem(name: 'Divider', italic: true),
+          DemoMenuItem(
               name: 'Thickness',
               builder: () => DividerThicknessExample(),
               codeFile: 'lib/divider_thickness.dart',
               maxSize: maxSize,
               indentation: 2),
-          MenuItem(
+          DemoMenuItem(
               name: 'Custom widget',
               builder: () => DividerCustomWidgetExample(),
               codeFile: 'lib/divider_custom_widget.dart',
               maxSize: maxSize,
               indentation: 2),
-          MenuItem(name: 'Divider painters', italic: true, indentation: 2),
-          MenuItem(
+          DemoMenuItem(name: 'Divider painters', italic: true, indentation: 2),
+          DemoMenuItem(
               name: 'Background color',
               builder: () => DividerColorExample(),
               codeFile: 'lib/divider_color.dart',
               maxSize: maxSize,
               indentation: 3),
-          MenuItem(
+          DemoMenuItem(
               name: 'Highlighted background color',
               builder: () => DividerHighlightedColorExample(),
               codeFile: 'lib/divider_highlighted_color.dart',
               maxSize: maxSize,
               indentation: 3),
-          MenuItem(
+          DemoMenuItem(
               name: 'Dashed divider',
               builder: () => DashedDividerExample(),
               codeFile: 'lib/dashed_divider.dart',
               maxSize: maxSize,
               indentation: 3),
-          MenuItem(
+          DemoMenuItem(
               name: 'Customizations',
               builder: () => CustomDashedDividerExample(),
               codeFile: 'lib/custom_dashed_divider.dart',
               maxSize: maxSize,
               indentation: 4),
-          MenuItem(
+          DemoMenuItem(
               name: 'Grooved divider 1',
               builder: () => GroovedDivider1Example(),
               codeFile: 'lib/grooved_divider_1.dart',
               maxSize: maxSize,
               indentation: 3),
-          MenuItem(
+          DemoMenuItem(
               name: 'Customizations',
               builder: () => CustomGroovedDivider1Example(),
               codeFile: 'lib/custom_grooved_divider_1.dart',
               maxSize: maxSize,
               indentation: 4),
-          MenuItem(
+          DemoMenuItem(
               name: 'Grooved divider 2',
               builder: () => GroovedDivider2Example(),
               codeFile: 'lib/grooved_divider_2.dart',
               maxSize: maxSize,
               indentation: 3),
-          MenuItem(
+          DemoMenuItem(
               name: 'Customizations',
               builder: () => CustomGroovedDivider2Example(),
               codeFile: 'lib/custom_grooved_divider_2.dart',
               maxSize: maxSize,
               indentation: 4),
-          MenuItem(name: 'Dynamic', italic: true),
-          MenuItem(
+          DemoMenuItem(name: 'Dynamic', italic: true),
+          DemoMenuItem(
               name: 'Add/Remove',
               builder: () => AddRemoveExample(),
               codeFile: 'lib/add_remove.dart',
               maxSize: maxSize,
               indentation: 2),
-          MenuItem(
+          DemoMenuItem(
               name: 'Changing the weights or sizes programmatically',
               builder: () => ProgrammaticallyExample(),
               codeFile: 'lib/add_remove.dart',
