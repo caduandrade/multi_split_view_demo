@@ -1,5 +1,6 @@
 import 'package:demoflu/demoflu.dart';
 import 'package:flutter/material.dart';
+import 'package:multi_split_view_demo/add_remove.dart';
 import 'package:multi_split_view_demo/custom_dashed_divider.dart';
 import 'package:multi_split_view_demo/custom_grooved_divider_1.dart';
 import 'package:multi_split_view_demo/custom_grooved_divider_2.dart';
@@ -7,8 +8,8 @@ import 'package:multi_split_view_demo/dashed_divider.dart';
 import 'package:multi_split_view_demo/divider_color.dart';
 import 'package:multi_split_view_demo/divider_custom_widget.dart';
 import 'package:multi_split_view_demo/divider_highlighted_color.dart';
+import 'package:multi_split_view_demo/divider_tap_gestures.dart';
 import 'package:multi_split_view_demo/divider_thickness.dart';
-import 'package:multi_split_view_demo/add_remove.dart';
 import 'package:multi_split_view_demo/get_started.dart';
 import 'package:multi_split_view_demo/grooved_divider_1.dart';
 import 'package:multi_split_view_demo/grooved_divider_2.dart';
@@ -27,7 +28,7 @@ void main() {
   Size? maxSize;
   //maxSize = Size(400, 300);
   runApp(DemoFluApp(
-      title: 'Multi split view (2.1.0)',
+      title: 'Multi split view (2.2.0)',
       widgetBackground: Colors.white,
       appMenuBuilder: () {
         return [
@@ -108,6 +109,13 @@ void main() {
               codeFile: 'lib/divider_custom_widget.dart',
               maxSize: maxSize,
               indentation: 2),
+          DemoMenuItem(
+              name: 'Tap gestures',
+              builder: () => DividerTapGesturesExample(),
+              codeFile: 'lib/divider_tap_gestures.dart',
+              maxSize: maxSize,
+              indentation: 2,
+              consoleEnabled: true),
           DemoMenuItem(name: 'Divider painters', italic: true, indentation: 2),
           DemoMenuItem(
               name: 'Background color',
