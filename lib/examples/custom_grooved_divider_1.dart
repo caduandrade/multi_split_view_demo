@@ -2,11 +2,10 @@ import 'package:demoflu/demoflu.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:multi_split_view/multi_split_view.dart';
-import 'package:multi_split_view_demo/example_widget.dart';
+import 'package:multi_split_view_demo/examples/example_widget.dart';
 
-class CustomDashedDividerExample extends Example {
-  @override
-  Widget buildMainWidget(BuildContext context) => MainWidget();
+class CustomGroovedDivider1Example extends Example {
+  CustomGroovedDivider1Example() : super(widget: MainWidget(),codeFile: 'lib/examples/custom_grooved_divider_1.dart');
 }
 
 class MainWidget extends StatelessWidget with ContentBuilder {
@@ -20,8 +19,11 @@ class MainWidget extends StatelessWidget with ContentBuilder {
     MultiSplitViewTheme theme = MultiSplitViewTheme(
         child: multiSplitView,
         data: MultiSplitViewThemeData(
-            dividerPainter: DividerPainters.dashed(
-                gap: 30, size: 20, thickness: 3, highlightedThickness: 6)));
+            dividerPainter: DividerPainters.grooved1(
+                size: 5,
+                highlightedSize: 30,
+                thickness: 3,
+                highlightedThickness: 6)));
 
     return theme;
   }

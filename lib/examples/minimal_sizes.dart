@@ -1,11 +1,10 @@
 import 'package:demoflu/demoflu.dart';
 import 'package:flutter/widgets.dart';
 import 'package:multi_split_view/multi_split_view.dart';
-import 'package:multi_split_view_demo/example_widget.dart';
+import 'package:multi_split_view_demo/examples/example_widget.dart';
 
-class MinimalWeightsExample extends Example {
-  @override
-  Widget buildMainWidget(BuildContext context) => MainWidget();
+class MinimalSizesExample extends Example {
+  MinimalSizesExample() : super(widget: MainWidget(),codeFile: 'lib/examples/minimal_sizes.dart');
 }
 
 class MainWidget extends StatefulWidget {
@@ -14,8 +13,8 @@ class MainWidget extends StatefulWidget {
 }
 
 class _State extends State<MainWidget> with ContentBuilder {
-  MultiSplitViewController _controller = MultiSplitViewController(
-      areas: [Area(minimalWeight: .25), Area(minimalWeight: .25)]);
+  MultiSplitViewController _controller =
+      MultiSplitViewController(areas: [Area(minimalSize: 150)]);
 
   @override
   Widget build(BuildContext context) {

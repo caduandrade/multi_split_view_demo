@@ -1,183 +1,146 @@
 import 'package:demoflu/demoflu.dart';
 import 'package:flutter/material.dart';
-import 'package:multi_split_view_demo/add_remove.dart';
-import 'package:multi_split_view_demo/custom_dashed_divider.dart';
-import 'package:multi_split_view_demo/custom_grooved_divider_1.dart';
-import 'package:multi_split_view_demo/custom_grooved_divider_2.dart';
-import 'package:multi_split_view_demo/dashed_divider.dart';
-import 'package:multi_split_view_demo/divider_color.dart';
-import 'package:multi_split_view_demo/divider_custom_widget.dart';
-import 'package:multi_split_view_demo/divider_highlighted_color.dart';
-import 'package:multi_split_view_demo/divider_tap_gestures.dart';
-import 'package:multi_split_view_demo/divider_thickness.dart';
-import 'package:multi_split_view_demo/get_started.dart';
-import 'package:multi_split_view_demo/grooved_divider_1.dart';
-import 'package:multi_split_view_demo/grooved_divider_2.dart';
-import 'package:multi_split_view_demo/horizontal.dart';
-import 'package:multi_split_view_demo/horizontal_vertical.dart';
-import 'package:multi_split_view_demo/listener.dart';
-import 'package:multi_split_view_demo/minimal_sizes.dart';
-import 'package:multi_split_view_demo/minimal_weights.dart';
-import 'package:multi_split_view_demo/programmatically.dart';
-import 'package:multi_split_view_demo/resizable.dart';
-import 'package:multi_split_view_demo/setting_weight_stateful.dart';
-import 'package:multi_split_view_demo/setting_weight_stateless.dart';
-import 'package:multi_split_view_demo/vertical.dart';
+import 'package:multi_split_view_demo/examples/add_remove.dart';
+import 'package:multi_split_view_demo/examples/custom_dashed_divider.dart';
+import 'package:multi_split_view_demo/examples/custom_grooved_divider_1.dart';
+import 'package:multi_split_view_demo/examples/custom_grooved_divider_2.dart';
+import 'package:multi_split_view_demo/examples/dashed_divider.dart';
+import 'package:multi_split_view_demo/examples/divider_color.dart';
+import 'package:multi_split_view_demo/examples/divider_custom_widget.dart';
+import 'package:multi_split_view_demo/examples/divider_highlighted_color.dart';
+import 'package:multi_split_view_demo/examples/divider_tap_gestures.dart';
+import 'package:multi_split_view_demo/examples/divider_thickness.dart';
+import 'package:multi_split_view_demo/examples/get_started.dart';
+import 'package:multi_split_view_demo/examples/grooved_divider_1.dart';
+import 'package:multi_split_view_demo/examples/grooved_divider_2.dart';
+import 'package:multi_split_view_demo/examples/horizontal.dart';
+import 'package:multi_split_view_demo/examples/horizontal_vertical.dart';
+import 'package:multi_split_view_demo/examples/listener.dart';
+import 'package:multi_split_view_demo/examples/minimal_sizes.dart';
+import 'package:multi_split_view_demo/examples/minimal_weights.dart';
+import 'package:multi_split_view_demo/examples/programmatically.dart';
+import 'package:multi_split_view_demo/examples/resizable.dart';
+import 'package:multi_split_view_demo/examples/setting_weight_stateful.dart';
+import 'package:multi_split_view_demo/examples/setting_weight_stateless.dart';
+import 'package:multi_split_view_demo/examples/vertical.dart';
 
 void main() {
-  Size? maxSize;
-  //maxSize = Size(400, 300);
   runApp(DemoFluApp(
-      title: 'Multi split view (2.2.0)',
-      widgetBackground: Colors.white,
-      appMenuBuilder: () {
-        return [
-          DemoMenuItem(
-              name: 'Get started',
-              builder: () => GetStartedExample(),
-              codeFile: 'lib/get_started.dart',
-              maxSize: maxSize,
-              indentation: 2),
-          DemoMenuItem(
-              name: 'Horizontal',
-              builder: () => HorizontalExample(),
-              codeFile: 'lib/horizontal.dart',
-              maxSize: maxSize,
-              indentation: 2),
-          DemoMenuItem(
-              name: 'Vertical',
-              builder: () => VerticalExample(),
-              codeFile: 'lib/vertical.dart',
-              maxSize: maxSize,
-              indentation: 2),
-          DemoMenuItem(
-              name: 'Horizontal and vertical',
-              builder: () => HorizontalVerticalExample(),
-              codeFile: 'lib/horizontal_vertical.dart',
-              maxSize: maxSize,
-              indentation: 2),
-          DemoMenuItem(name: 'Size', italic: true),
-          DemoMenuItem(
-              name: 'Setting the weight', indentation: 2, italic: true),
-          DemoMenuItem(
-              name: 'Stateless',
-              builder: () => SettingWeightStatelessExample(),
-              codeFile: 'lib/setting_weight_stateless.dart',
-              maxSize: maxSize,
-              indentation: 3),
-          DemoMenuItem(
-              name: 'Stateful',
-              builder: () => SettingWeightStatefulExample(),
-              codeFile: 'lib/setting_weight_stateful.dart',
-              maxSize: maxSize,
-              indentation: 3),
-          DemoMenuItem(
-              name: 'Minimal weights',
-              builder: () => MinimalWeightsExample(),
-              codeFile: 'lib/minimal_weights.dart',
-              maxSize: maxSize,
-              indentation: 2),
-          DemoMenuItem(
-              name: 'Minimal sizes',
-              builder: () => MinimalSizesExample(),
-              codeFile: 'lib/minimal_sizes.dart',
-              maxSize: maxSize,
-              indentation: 2),
-          DemoMenuItem(
-              name: 'Resizing disabled',
-              builder: () => ResizableExample(),
-              codeFile: 'lib/resizable.dart',
-              maxSize: maxSize,
-              indentation: 2),
-          DemoMenuItem(
-              name: 'Listener',
-              builder: () => SizeListenerExample(),
-              codeFile: 'lib/listener.dart',
-              consoleEnabled: true,
-              maxSize: maxSize,
-              indentation: 2),
-          DemoMenuItem(name: 'Divider', italic: true),
-          DemoMenuItem(
-              name: 'Thickness',
-              builder: () => DividerThicknessExample(),
-              codeFile: 'lib/divider_thickness.dart',
-              maxSize: maxSize,
-              indentation: 2),
-          DemoMenuItem(
-              name: 'Custom widget',
-              builder: () => DividerCustomWidgetExample(),
-              codeFile: 'lib/divider_custom_widget.dart',
-              maxSize: maxSize,
-              indentation: 2),
-          DemoMenuItem(
-              name: 'Tap gestures',
-              builder: () => DividerTapGesturesExample(),
-              codeFile: 'lib/divider_tap_gestures.dart',
-              maxSize: maxSize,
-              indentation: 2,
-              consoleEnabled: true),
-          DemoMenuItem(name: 'Divider painters', italic: true, indentation: 2),
-          DemoMenuItem(
-              name: 'Background color',
-              builder: () => DividerColorExample(),
-              codeFile: 'lib/divider_color.dart',
-              maxSize: maxSize,
-              indentation: 3),
-          DemoMenuItem(
-              name: 'Highlighted background color',
-              builder: () => DividerHighlightedColorExample(),
-              codeFile: 'lib/divider_highlighted_color.dart',
-              maxSize: maxSize,
-              indentation: 3),
-          DemoMenuItem(
-              name: 'Dashed divider',
-              builder: () => DashedDividerExample(),
-              codeFile: 'lib/dashed_divider.dart',
-              maxSize: maxSize,
-              indentation: 3),
-          DemoMenuItem(
-              name: 'Customizations',
-              builder: () => CustomDashedDividerExample(),
-              codeFile: 'lib/custom_dashed_divider.dart',
-              maxSize: maxSize,
-              indentation: 4),
-          DemoMenuItem(
-              name: 'Grooved divider 1',
-              builder: () => GroovedDivider1Example(),
-              codeFile: 'lib/grooved_divider_1.dart',
-              maxSize: maxSize,
-              indentation: 3),
-          DemoMenuItem(
-              name: 'Customizations',
-              builder: () => CustomGroovedDivider1Example(),
-              codeFile: 'lib/custom_grooved_divider_1.dart',
-              maxSize: maxSize,
-              indentation: 4),
-          DemoMenuItem(
-              name: 'Grooved divider 2',
-              builder: () => GroovedDivider2Example(),
-              codeFile: 'lib/grooved_divider_2.dart',
-              maxSize: maxSize,
-              indentation: 3),
-          DemoMenuItem(
-              name: 'Customizations',
-              builder: () => CustomGroovedDivider2Example(),
-              codeFile: 'lib/custom_grooved_divider_2.dart',
-              maxSize: maxSize,
-              indentation: 4),
-          DemoMenuItem(name: 'Dynamic', italic: true),
-          DemoMenuItem(
-              name: 'Add/Remove',
-              builder: () => AddRemoveExample(),
-              codeFile: 'lib/add_remove.dart',
-              maxSize: maxSize,
-              indentation: 2),
-          DemoMenuItem(
-              name: 'Changing the weights or sizes programmatically',
-              builder: () => ProgrammaticallyExample(),
-              codeFile: 'lib/add_remove.dart',
-              maxSize: maxSize,
-              indentation: 1)
-        ];
-      }));
+      // maxSize: Size(400, 300),
+      title: 'Multi split view (2.3.0)',
+      exampleBackground: Colors.white,
+      rootMenus: _rootMenus));
 }
+
+List<DemoMenuItem> get _rootMenus => [
+      _getStarted,
+      _horizontal,
+      _vertical,
+      _horizontalAndVertical,
+      _sizeAndWeight,
+      _dividerSections,
+      _dynamicSection,
+      _changingWeightsSizesProgrammatically
+    ];
+
+DemoMenuItem get _getStarted =>
+    DemoMenuItem('Get started', example: GetStartedExample());
+
+DemoMenuItem get _horizontal =>
+    DemoMenuItem('Horizontal', example: HorizontalExample());
+
+DemoMenuItem get _vertical =>
+    DemoMenuItem('Vertical', example: VerticalExample());
+
+DemoMenuItem get _horizontalAndVertical =>
+    DemoMenuItem('Horizontal and vertical',
+        example: HorizontalVerticalExample());
+
+DemoMenuItem get _sizeAndWeight => DemoMenuItem('Size and weight', children: [
+      _settingTheWeight,
+      _minimalWeights,
+      _minimalSizes,
+      _resizingDisabled,
+      _listener
+    ]);
+
+DemoMenuItem get _settingTheWeight =>
+    DemoMenuItem('Setting the weight', children: [_stateless, _stateful]);
+
+DemoMenuItem get _stateless =>
+    DemoMenuItem('Stateless', example: SettingWeightStatelessExample());
+
+DemoMenuItem get _stateful =>
+    DemoMenuItem('Stateful', example: SettingWeightStatefulExample());
+
+DemoMenuItem get _minimalWeights =>
+    DemoMenuItem('Minimal weights', example: MinimalWeightsExample());
+
+DemoMenuItem get _minimalSizes =>
+    DemoMenuItem('Minimal sizes', example: MinimalSizesExample());
+
+DemoMenuItem get _resizingDisabled =>
+    DemoMenuItem('Resizing disabled', example: ResizableExample());
+
+DemoMenuItem get _listener =>
+    DemoMenuItem('Listener', example: SizeListenerExample());
+
+DemoMenuItem get _dividerSections => DemoMenuItem('Divider', children: [
+      _thickness,
+      _customWidget,
+      _tapGestures,
+      _dividerPaintersSection
+    ]);
+
+DemoMenuItem get _thickness =>
+    DemoMenuItem('Thickness', example: DividerThicknessExample());
+
+DemoMenuItem get _customWidget =>
+    DemoMenuItem('Custom widget', example: DividerCustomWidgetExample());
+
+DemoMenuItem get _tapGestures =>
+    DemoMenuItem('Tap gestures', example: DividerTapGesturesExample());
+
+DemoMenuItem get _dividerPaintersSection =>
+    DemoMenuItem('Divider painters', children: [
+      _backgroundColor,
+      _highlightedBackground,
+      _dashedDivider,
+      _groovedDivider1,
+      _groovedDivider2
+    ]);
+
+DemoMenuItem get _backgroundColor =>
+    DemoMenuItem('Background color', example: DividerColorExample());
+
+DemoMenuItem get _highlightedBackground =>
+    DemoMenuItem('Highlighted background color',
+        example: DividerHighlightedColorExample());
+
+DemoMenuItem get _dashedDivider => DemoMenuItem('Dashed divider',
+    example: DashedDividerExample(), children: [_customDashedDivider]);
+
+DemoMenuItem get _customDashedDivider =>
+    DemoMenuItem('Customizations', example: CustomDashedDividerExample());
+
+DemoMenuItem get _groovedDivider1 => DemoMenuItem('Grooved divider 1',
+    example: GroovedDivider1Example(), children: [_customGroovedDivider1]);
+
+DemoMenuItem get _customGroovedDivider1 =>
+    DemoMenuItem('Customizations', example: CustomGroovedDivider1Example());
+
+DemoMenuItem get _groovedDivider2 => DemoMenuItem('Grooved divider 2',
+    example: GroovedDivider2Example(), children: [_customGroovedDivider2]);
+
+DemoMenuItem get _customGroovedDivider2 =>
+    DemoMenuItem('Customizations', example: CustomGroovedDivider2Example());
+
+DemoMenuItem get _dynamicSection =>
+    DemoMenuItem('Dynamic', children: [_dynamicAddRemove]);
+
+DemoMenuItem get _dynamicAddRemove =>
+    DemoMenuItem('Add/Remove', example: AddRemoveExample());
+
+DemoMenuItem get _changingWeightsSizesProgrammatically =>
+    DemoMenuItem('Changing the weights or sizes programmatically',
+        example: ProgrammaticallyExample());
