@@ -4,7 +4,10 @@ import 'package:multi_split_view/multi_split_view.dart';
 import 'package:multi_split_view_demo/examples/example_widget.dart';
 
 class DividerHighlightedColorExample extends Example {
-  DividerHighlightedColorExample() : super(widget: MainWidget(),codeFile: 'lib/examples/divider_highlighted_color.dart');
+  DividerHighlightedColorExample()
+      : super(
+            widget: MainWidget(),
+            codeFile: 'lib/examples/divider_highlighted_color.dart');
 }
 
 class MainWidget extends StatelessWidget with ContentBuilder {

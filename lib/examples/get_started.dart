@@ -4,10 +4,13 @@ import 'package:multi_split_view/multi_split_view.dart';
 import 'package:multi_split_view_demo/examples/example_widget.dart';
 
 class GetStartedExample extends Example {
-  GetStartedExample() : super(widget: MainWidget(),codeFile: 'lib/examples/get_started.dart');
+  GetStartedExample()
+      : super(widget: MainWidget(), codeFile: 'lib/examples/get_started.dart');
 }
 
 class MainWidget extends StatelessWidget with ContentBuilder {
+  MainWidget({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     Widget child1 = buildContent(1);
@@ -22,9 +25,9 @@ class MainWidget extends StatelessWidget with ContentBuilder {
     ]);
 
     MultiSplitViewTheme theme = MultiSplitViewTheme(
-        child: multiSplitView,
-        data: MultiSplitViewThemeData(
-            dividerPainter: DividerPainters.grooved1()));
+        data:
+            MultiSplitViewThemeData(dividerPainter: DividerPainters.grooved1()),
+        child: multiSplitView);
 
     return theme;
   }

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class ContentBuilder {
   final List<Color> colors = [
@@ -12,8 +11,8 @@ class ContentBuilder {
   ];
   Widget buildContent(int number) {
     return Container(
-      child: Center(child: Text(number.toString())),
       color: colors[number % colors.length],
+      child: Center(child: Text(number.toString())),
     );
   }
 }

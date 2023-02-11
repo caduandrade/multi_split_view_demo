@@ -4,7 +4,10 @@ import 'package:multi_split_view/multi_split_view.dart';
 import 'package:multi_split_view_demo/examples/example_widget.dart';
 
 class DividerCustomWidgetExample extends Example {
-  DividerCustomWidgetExample() : super(widget: MainWidget(),codeFile: 'lib/examples/divider_custom_widget.dart');
+  DividerCustomWidgetExample()
+      : super(
+            widget: MainWidget(),
+            codeFile: 'lib/examples/divider_custom_widget.dart');
 }
 
 class MainWidget extends StatelessWidget with ContentBuilder {

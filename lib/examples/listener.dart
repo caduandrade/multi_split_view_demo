@@ -4,7 +4,11 @@ import 'package:multi_split_view/multi_split_view.dart';
 import 'package:multi_split_view_demo/examples/example_widget.dart';
 
 class SizeListenerExample extends Example {
-  SizeListenerExample() : super(widget: MainWidget(),codeFile: 'lib/examples/listener.dart',consoleEnabled: true);
+  SizeListenerExample()
+      : super(
+            widget: MainWidget(),
+            codeFile: 'lib/examples/listener.dart',
+            consoleEnabled: true);
 }
 
 class MainWidget extends StatelessWidget with ContentBuilder {

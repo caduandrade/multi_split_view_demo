@@ -5,10 +5,15 @@ import 'package:multi_split_view/multi_split_view.dart';
 import 'package:multi_split_view_demo/examples/example_widget.dart';
 
 class SettingWeightStatelessExample extends Example {
-  SettingWeightStatelessExample() : super(widget: MainWidget(),codeFile: 'lib/examples/setting_weight_stateless.dart');
+  SettingWeightStatelessExample()
+      : super(
+            widget: MainWidget(),
+            codeFile: 'lib/examples/setting_weight_stateless.dart');
 }
 
 class MainWidget extends StatelessWidget with ContentBuilder {
+  MainWidget({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     Widget child1 = buildContent(1);

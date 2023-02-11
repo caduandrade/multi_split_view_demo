@@ -4,7 +4,9 @@ import 'package:multi_split_view/multi_split_view.dart';
 import 'package:multi_split_view_demo/examples/example_widget.dart';
 
 class DividerColorExample extends Example {
-  DividerColorExample() : super(widget: MainWidget(),codeFile: 'lib/examples/divider_color.dart');
+  DividerColorExample()
+      : super(
+            widget: MainWidget(), codeFile: 'lib/examples/divider_color.dart');
 }
 
 class MainWidget extends StatelessWidget with ContentBuilder {

@@ -4,7 +4,10 @@ import 'package:multi_split_view/multi_split_view.dart';
 import 'package:multi_split_view_demo/examples/example_widget.dart';
 
 class MinimalWeightsExample extends Example {
-  MinimalWeightsExample() : super(widget: MainWidget(),codeFile: 'lib/examples/minimal_weights.dart');
+  MinimalWeightsExample()
+      : super(
+            widget: MainWidget(),
+            codeFile: 'lib/examples/minimal_weights.dart');
 }
 
 class MainWidget extends StatefulWidget {

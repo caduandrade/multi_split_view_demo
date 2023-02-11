@@ -1,33 +1,37 @@
 import 'dart:math' as math;
+
 import 'package:demoflu/demoflu.dart';
 import 'package:flutter/material.dart';
 import 'package:multi_split_view/multi_split_view.dart';
 import 'package:multi_split_view_demo/examples/example_widget.dart';
 
 class AddRemoveExample extends Example {
-
-  AddRemoveExample() : super(widget: MainWidget(),codeFile: 'lib/examples/add_remove.dart');
-
+  AddRemoveExample()
+      : super(
+            widget: const MainWidget(),
+            codeFile: 'lib/examples/add_remove.dart');
 }
 
 class MainWidget extends StatefulWidget {
+  const MainWidget({Key? key}) : super(key: key);
+
   @override
   State<StatefulWidget> createState() => MainWidgetState();
 }
 
 class MainWidgetState extends State<MainWidget> with ContentBuilder {
-  MultiSplitViewController _controller = MultiSplitViewController();
+  final MultiSplitViewController _controller = MultiSplitViewController();
   int _count = 3;
 
   @override
   Widget build(BuildContext context) {
     Widget buttons = Padding(
+        padding: const EdgeInsets.all(8),
         child: Row(children: [
-          ElevatedButton(onPressed: _onAdd, child: Text('Add')),
-          SizedBox(width: 8),
-          ElevatedButton(onPressed: _onRemove, child: Text('Remove'))
-        ]),
-        padding: EdgeInsets.all(8));
+          ElevatedButton(onPressed: _onAdd, child: const Text('Add')),
+          const SizedBox(width: 8),
+          ElevatedButton(onPressed: _onRemove, child: const Text('Remove'))
+        ]));
 
     List<Widget> children = [];
     for (int i = 0; i < _count; i++) {
@@ -35,7 +39,7 @@ class MainWidgetState extends State<MainWidget> with ContentBuilder {
     }
 
     MultiSplitView multiSplitView =
-        MultiSplitView(children: children, controller: _controller);
+        MultiSplitView(controller: _controller, children: children);
 
     return Column(children: [buttons, Expanded(child: multiSplitView)]);
   }

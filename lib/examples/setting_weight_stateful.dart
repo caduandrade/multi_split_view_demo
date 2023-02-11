@@ -5,10 +5,15 @@ import 'package:multi_split_view/multi_split_view.dart';
 import 'package:multi_split_view_demo/examples/example_widget.dart';
 
 class SettingWeightStatefulExample extends Example {
-  SettingWeightStatefulExample() : super(widget: MainWidget(),codeFile: 'lib/examples/setting_weight_stateful.dart');
+  SettingWeightStatefulExample()
+      : super(
+            widget: const MainWidget(),
+            codeFile: 'lib/examples/setting_weight_stateful.dart');
 }
 
 class MainWidget extends StatefulWidget {
+  const MainWidget({Key? key}) : super(key: key);
+
   @override
   State<StatefulWidget> createState() => _State();
 }
