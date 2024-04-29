@@ -18,19 +18,28 @@
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
+  <meta name="description" content="Demoflu Demo">
 
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="multi_split_view_demo">
+  <meta name="apple-mobile-web-app-title" content="example">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png"/>
 
-  <title>multi_split_view_demo</title>
+  <title>MultiSplitView</title>
   <link rel="manifest" href="manifest.json">
+
+  <style>
+    .center {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
 
   <script>
     // The value below is injected by flutter build, do not touch.
@@ -40,20 +49,24 @@
   <script src="flutter.js" defer></script>
 </head>
 <body>
-  <script>
-    window.addEventListener('load', function(ev) {
-      // Download main.dart.js
-      _flutter.loader.loadEntrypoint({
-        serviceWorker: {
-          serviceWorkerVersion: serviceWorkerVersion,
-        },
-        onEntrypointLoaded: function(engineInitializer) {
-          engineInitializer.initializeEngine().then(function(appRunner) {
-            appRunner.runApp();
-          });
-        }
-      });
+<div id="loading" class="center"></div>
+<script>
+  window.addEventListener('load', function(ev) {
+    var loading = document.querySelector('#loading');
+    loading.textContent = "Loading...";
+    _flutter.loader.loadEntrypoint({
+      serviceWorker: {
+        serviceWorkerVersion: serviceWorkerVersion,
+      },
+      onEntrypointLoaded: async function(engineInitializer) {
+        loading.textContent = "Initializing engine...";
+        let appRunner = await engineInitializer.initializeEngine();
+
+        loading.textContent = "Running demo...";
+        await appRunner.runApp();
+      }
     });
-  </script>
+  });
+</script>
 </body>
 </html>
