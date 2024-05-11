@@ -17,7 +17,7 @@ class MyWidgetState extends State<MyWidget> {
   Widget build(BuildContext context) {
     return MultiSplitView(
         controller: _controller,
-        builder: (context, index, area) {
+        builder: (context, area) {
           switch (area.data) {
             case 'blue':
               return Draft.blue();

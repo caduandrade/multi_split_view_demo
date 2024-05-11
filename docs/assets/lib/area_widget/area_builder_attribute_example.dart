@@ -11,9 +11,9 @@ class MyWidget extends StatefulWidget {
 
 class MyWidgetState extends State<MyWidget> {
   final MultiSplitViewController _controller = MultiSplitViewController(areas: [
-    Area(builder: (context) => Draft.blue()),
-    Area(builder: (context) => Draft.yellow()),
-    Area(builder: (context) => Draft.green())
+    Area(builder: (context, area) => Draft.blue()),
+    Area(builder: (context, area) => Draft.yellow()),
+    Area(builder: (context, area) => Draft.green())
   ]);
 
   @override

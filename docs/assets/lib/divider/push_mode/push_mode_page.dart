@@ -38,9 +38,9 @@ class PushModePage extends DemoFluPage {
 
 class AllFlex {
   final MultiSplitViewController controller = MultiSplitViewController(areas: [
-    Area(widget: Draft.blue(), data: 'blue'),
-    Area(widget: Draft.yellow(), data: 'yellow'),
-    Area(widget: Draft.green(), data: 'green')
+    Area(builder: (context, area) => Draft.blue(), data: 'blue'),
+    Area(builder: (context, area) => Draft.yellow(), data: 'yellow'),
+    Area(builder: (context, area) => Draft.green(), data: 'green')
   ]);
 
   Widget build() {
@@ -58,9 +58,9 @@ class AllFlex {
 
 class SizedAreas {
   final MultiSplitViewController controller = MultiSplitViewController(areas: [
-    Area(size: 100, widget: Draft.blue(), data: 'blue'),
-    Area(size: 100, widget: Draft.yellow(), data: 'yellow'),
-    Area(widget: Draft.green(), data: 'green')
+    Area(size: 100, builder: (context, area) => Draft.blue(), data: 'blue'),
+    Area(size: 100, builder: (context, area) => Draft.yellow(), data: 'yellow'),
+    Area(builder: (context, area) => Draft.green(), data: 'green')
   ]);
 
   Widget build() {

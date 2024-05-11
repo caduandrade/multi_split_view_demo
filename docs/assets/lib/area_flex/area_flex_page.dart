@@ -22,9 +22,9 @@ class AreaFlexPage extends DemoFluPage {
   MultiSplitViewController _buildController() {
     //@demoflu_start:controller
     var controller = MultiSplitViewController(areas: [
-      Area(flex: 1, widget: Draft.blue(), data: 'blue'),
-      Area(flex: 3, widget: Draft.yellow(), data: 'yellow'),
-      Area(flex: 1, widget: Draft.green(), data: 'green')
+      Area(flex: 1, builder: (context, area) => Draft.blue(), data: 'blue'),
+      Area(flex: 3, builder: (context, area) => Draft.yellow(), data: 'yellow'),
+      Area(flex: 1, builder: (context, area) => Draft.green(), data: 'green')
     ]);
     //@demoflu_end:controller
     return controller;
@@ -33,9 +33,17 @@ class AreaFlexPage extends DemoFluPage {
   MultiSplitViewController _buildMaxMinController() {
     //@demoflu_start:maxMinController
     var controller = MultiSplitViewController(areas: [
-      Area(flex: 2, min: 1, widget: Draft.blue(), data: 'blue'),
-      Area(flex: 2, widget: Draft.yellow(), data: 'yellow'),
-      Area(flex: 1, max: 3, widget: Draft.green(), data: 'green')
+      Area(
+          flex: 2,
+          min: 1,
+          builder: (context, area) => Draft.blue(),
+          data: 'blue'),
+      Area(flex: 2, builder: (context, area) => Draft.yellow(), data: 'yellow'),
+      Area(
+          flex: 1,
+          max: 3,
+          builder: (context, area) => Draft.green(),
+          data: 'green')
     ]);
     //@demoflu_end:maxMinController
     return controller;

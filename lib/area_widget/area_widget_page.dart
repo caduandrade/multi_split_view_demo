@@ -7,12 +7,7 @@ class AreaWidgetPage extends DemoFluPage {
   PageSections buildSections(BuildContext context) {
     PageSections sections = PageSections();
 
-    sections.text(text: 'There are three options to set the area widget.');
-
-    sections.heading('Area widget attribute');
-
-    sections.code('lib/area_widget/area_widget_attribute_example.dart',
-        mark: 'show', loadMode: LoadMode.readOnlyMarked);
+    sections.text(text: 'There are two options to set the area widget.');
 
     sections.heading('Area builder attribute');
 
@@ -38,9 +33,9 @@ class Example extends StatefulWidget {
 
 class ExampleState extends State<Example> {
   final MultiSplitViewController _controller = MultiSplitViewController(areas: [
-    Area(widget: Draft.blue()),
-    Area(widget: Draft.yellow()),
-    Area(widget: Draft.green())
+    Area(builder: (context, area) => Draft.blue()),
+    Area(builder: (context, area) => Draft.yellow()),
+    Area(builder: (context, area) => Draft.green())
   ]);
 
   @override

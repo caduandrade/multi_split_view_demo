@@ -18,7 +18,7 @@ import 'package:multi_split_view_demo/resizable/resizable_page.dart';
 
 void main() {
   DemoFluApp app =
-      DemoFluApp(title: 'Multi split view (3.0.0)', rootMenus: _rootMenus);
+      DemoFluApp(title: 'Multi split view (3.1.0)', rootMenus: _rootMenus);
   app.macro.widget(Macros.styleExample, (context, section) {
     section
       ..padding = const EdgeInsets.all(10)

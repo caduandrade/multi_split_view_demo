@@ -29,9 +29,9 @@ class Example extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiSplitView(resizable: false, initialAreas: [
-      Area(widget: Draft.blue()),
-      Area(widget: Draft.yellow()),
-      Area(widget: Draft.green())
+      Area(builder: (context, area) => Draft.blue()),
+      Area(builder: (context, area) => Draft.yellow()),
+      Area(builder: (context, area) => Draft.green())
     ]);
   }
 }

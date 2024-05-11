@@ -28,9 +28,9 @@ class Example extends StatelessWidget {
   Widget build(BuildContext context) {
     MultiSplitView multiSplitView = MultiSplitView(
         initialAreas: [
-          Area(widget: Draft.blue()),
-          Area(widget: Draft.yellow()),
-          Area(widget: Draft.green())
+          Area(builder: (context, area) => Draft.blue()),
+          Area(builder: (context, area) => Draft.yellow()),
+          Area(builder: (context, area) => Draft.green())
         ],
         onDividerTap: (dividerIndex) => print('Tap: $dividerIndex'),
         onDividerDoubleTap: (dividerIndex) =>

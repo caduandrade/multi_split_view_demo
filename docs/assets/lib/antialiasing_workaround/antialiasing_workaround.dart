@@ -35,10 +35,10 @@ class AntialiasingWorkaroundPage extends DemoFluPage {
   Widget _workaroundOff(BuildContext context) {
     //@demoflu_start:off
     MultiSplitView view = MultiSplitView(initialAreas: [
-      Area(widget: Draft.blue()),
-      Area(widget: Draft.yellow()),
-      Area(widget: Draft.green()),
-      Area(widget: Draft.orange())
+      Area(builder: (context, area) => Draft.blue()),
+      Area(builder: (context, area) => Draft.yellow()),
+      Area(builder: (context, area) => Draft.green()),
+      Area(builder: (context, area) => Draft.orange())
     ]);
     //@demoflu_end:off
     return view;
@@ -48,10 +48,10 @@ class AntialiasingWorkaroundPage extends DemoFluPage {
     //@demoflu_start:on
     MultiSplitView view =
         MultiSplitView(antiAliasingWorkaround: true, initialAreas: [
-      Area(widget: Draft.blue()),
-      Area(widget: Draft.yellow()),
-      Area(widget: Draft.green()),
-      Area(widget: Draft.orange())
+      Area(builder: (context, area) => Draft.blue()),
+      Area(builder: (context, area) => Draft.yellow()),
+      Area(builder: (context, area) => Draft.green()),
+      Area(builder: (context, area) => Draft.orange())
     ]);
     //@demoflu_end:on
     return view;

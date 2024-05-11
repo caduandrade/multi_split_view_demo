@@ -9,9 +9,9 @@ class CustomWidgetExample extends StatelessWidget {
     //@demoflu_start:show
     MultiSplitView multiSplitView = MultiSplitView(
         initialAreas: [
-          Area(widget: Draft.blue()),
-          Area(widget: Draft.yellow()),
-          Area(widget: Draft.green())
+          Area(builder: (context, area) => Draft.blue()),
+          Area(builder: (context, area) => Draft.yellow()),
+          Area(builder: (context, area) => Draft.green())
         ],
         dividerBuilder:
             (axis, index, resizable, dragging, highlighted, themeData) {

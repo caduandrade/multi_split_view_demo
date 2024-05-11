@@ -8,23 +8,35 @@ import 'package:multi_split_view_demo/measure_view.dart';
 class SizeUnderflowPage extends DemoFluPage {
   //@demoflu_start:controller
   MultiSplitViewController controller = MultiSplitViewController(areas: [
-    Area(size: 100, widget: Draft.blue(), data: 'blue'),
-    Area(size: 100, widget: Draft.yellow(), data: 'yellow'),
-    Area(size: 50, max: 100, widget: Draft.green(), data: 'green')
+    Area(size: 100, builder: (context, area) => Draft.blue(), data: 'blue'),
+    Area(size: 100, builder: (context, area) => Draft.yellow(), data: 'yellow'),
+    Area(
+        size: 50,
+        max: 100,
+        builder: (context, area) => Draft.green(),
+        data: 'green')
   ]);
   //@demoflu_end:controller
 
   final List<Area> _initialAreas = [
-    Area(size: 100, widget: Draft.blue(), data: 'blue'),
-    Area(size: 100, widget: Draft.yellow(), data: 'yellow'),
-    Area(size: 50, max: 100, widget: Draft.green(), data: 'green')
+    Area(size: 100, builder: (context, area) => Draft.blue(), data: 'blue'),
+    Area(size: 100, builder: (context, area) => Draft.yellow(), data: 'yellow'),
+    Area(
+        size: 50,
+        max: 100,
+        builder: (context, area) => Draft.green(),
+        data: 'green')
   ];
 
   //@demoflu_start:controller2
   MultiSplitViewController controller2 = MultiSplitViewController(areas: [
-    Area(size: 100, widget: Draft.blue(), data: 'blue'),
-    Area(size: 100, widget: Draft.yellow(), data: 'yellow'),
-    Area(size: 50, max: 100, widget: Draft.green(), data: 'green')
+    Area(size: 100, builder: (context, area) => Draft.blue(), data: 'blue'),
+    Area(size: 100, builder: (context, area) => Draft.yellow(), data: 'yellow'),
+    Area(
+        size: 50,
+        max: 100,
+        builder: (context, area) => Draft.green(),
+        data: 'green')
   ]);
   //@demoflu_end:controller2
 
