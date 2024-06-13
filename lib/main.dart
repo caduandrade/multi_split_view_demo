@@ -5,6 +5,7 @@ import 'package:multi_split_view_demo/area_flex/area_flex_page.dart';
 import 'package:multi_split_view_demo/area_size/area_size_page.dart';
 import 'package:multi_split_view_demo/area_widget/area_widget_page.dart';
 import 'package:multi_split_view_demo/axis/axis_page.dart';
+import 'package:multi_split_view_demo/changing_programmatically/changing_programmatically_page.dart';
 import 'package:multi_split_view_demo/divider/customization/customization.dart';
 import 'package:multi_split_view_demo/divider/listener/listener_page.dart';
 import 'package:multi_split_view_demo/divider/push_mode/push_mode_page.dart';
@@ -18,7 +19,7 @@ import 'package:multi_split_view_demo/resizable/resizable_page.dart';
 
 void main() {
   DemoFluApp app =
-      DemoFluApp(title: 'Multi split view (3.1.0)', rootMenus: _rootMenus);
+      DemoFluApp(title: 'Multi split view (3.2.0)', rootMenus: _rootMenus);
   app.macro.widget(Macros.styleExample, (context, section) {
     section
       ..padding = const EdgeInsets.all(10)
@@ -56,6 +57,8 @@ List<DemoMenuItem> get _rootMenus => [
       DemoMenuItem('Area widget', page: () => AreaWidgetPage()),
       DemoMenuItem('Area flex', page: () => AreaFlexPage()),
       DemoMenuItem('Area size', page: () => AreaSizePage()),
+      DemoMenuItem('Changing programmatically',
+          page: () => ChangingProgrammaticallyPage()),
       DemoMenuItem('Inconsistency resolution', children: [
         DemoMenuItem('Zero flex', page: () => ZeroFlexPage()),
         DemoMenuItem('Size overflow', page: () => SizeOverflowPage()),
